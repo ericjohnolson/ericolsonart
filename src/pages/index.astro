@@ -1,0 +1,36 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const year = new Date().getFullYear();
+---
+
+<BaseLayout
+  title="Home Page"
+  description="Eric John Olson is an artist and software engineer based in Seattle, WA. He collaborates with artists and community members to co-create projects and conduct collective research."
+  bodyClass="home-wrap gradient"
+  navVariant="home"
+  showFooter={false}
+>
+  <div class="masthead">
+    <div class="container">
+      <p>
+        <a href="/about/">Eric John Olson</a> is an artist and software engineer based in Seattle, WA. He collaborates with artists and community members to co-create <a href="/work/">projects</a> and conduct collective <a href="/research/">research</a>. His recent work explores movement, reenactment and technology while examining the themes of <a href="/projects/peebs/">housing</a>, <a href="/projects/orbiting-together/">intuition</a>, <a href="/projects/between-two-shores/">intergenerational exchange</a>, and <a href="/projects/dead-dad-dining-club/">death</a>. If you want hear more you can sign up for occasional <a href="https://tinyletter.com/ericjohnolson" target="_blank" rel="noopener">newsletters</a>, send him an <a href="/about/">email</a>, or drop a <a href="/about/">letter</a> in the post.
+      </p>
+      <p></p>
+    </div>
+  </div>
+
+  <div class="home-wrap-bottom"></div>
+
+  <footer class="navbar splash-footer">
+    <div class="container">
+      <span>
+        Also there's more over at <a href="https://vimeo.com/ericjohnolson">vimeo</a> and
+        <a href="https://github.com/ericjohnolson">github</a>.
+        All content is under a
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">creative&nbsp;commons&nbsp;license</a>,
+        {year}.
+      </span>
+    </div>
+  </footer>
+</BaseLayout>

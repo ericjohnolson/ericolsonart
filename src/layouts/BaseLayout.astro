@@ -1,0 +1,158 @@
+---
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/bootstrap-grid.css';
+import '../styles/site.css';
+
+/**
+ * BaseLayout
+ *
+ * Props:
+ *   title       - page <title> suffix (e.g. "About | Eric Olson")
+ *   description - meta description (optional)
+ *   bodyClass   - CSS classes applied to <body>
+ *                 e.g. "home-wrap gradient" | "about-theme base-theme" |
+ *                      "projects-theme base-theme" | "research-theme base-theme"
+ *   navVariant  - "home" | "inner"  (passed through to Navigation)
+ *   showFooter  - whether to render the inner-page footer (default: true)
+ */
+interface Props {
+  title?: string;
+  description?: string;
+  bodyClass?: string;
+  navVariant?: 'home' | 'inner';
+  showFooter?: boolean;
+}
+
+const {
+  title = 'Eric Olson',
+  description = '',
+  bodyClass = '',
+  navVariant = 'inner',
+  showFooter = true,
+} = Astro.props;
+
+const fullTitle = title === 'Eric Olson' ? title : `${title} | Eric Olson`;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="google-site-verification" content="4OrBcQtTjV2NizBDaFH6m2pM0kRQXZXBgwCdvRCjWNE" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {description && <meta name="description" content={description} />}
+
+    <title>{fullTitle}</title>
+
+    <!-- Google Fonts -->
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arbutus+Slab&family=Libre+Baskerville:wght@400;700&family=Montserrat&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome 4 CDN -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"
+    />
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="/favicon/site.webmanifest" />
+    <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- Styles are bundled via Astro CSS pipeline (imported in frontmatter) -->
+  </head>
+
+  <body class={bodyClass}>
+    <Navigation variant={navVariant} />
+
+    <slot />
+
+    {showFooter && navVariant !== 'home' && <Footer variant="inner" />}
+
+    <script>
+      // Hide/show header on scroll + nav transparency toggle
+      // Ported from wp-content/themes/portfolio/scripts/site.js (vanilla JS, no jQuery)
+      (function () {
+        var didScroll = false;
+        var lastScrollTop = 0;
+        var delta = 5;
+        var header = document.querySelector('header');
+        var navbarHeight = header ? header.offsetHeight : 55;
+
+        window.addEventListener('scroll', function () {
+          didScroll = true;
+        });
+
+        setInterval(function () {
+          if (didScroll) {
+            hasScrolled();
+            didScroll = false;
+          }
+        }, 250);
+
+        function hasScrolled() {
+          var st = window.scrollY || document.documentElement.scrollTop;
+
+          // Only act if scroll distance exceeds delta
+          if (Math.abs(lastScrollTop - st) <= delta) return;
+
+          if (st > lastScrollTop && st > navbarHeight) {
+            // Scrolling down past the navbar: hide header, push footer out
+            if (header) {
+              header.classList.remove('nav-down');
+              header.classList.add('nav-up');
+            }
+            var footer = document.querySelector('.page-footer');
+            if (footer) {
+              footer.classList.add('footer-up');
+              footer.classList.remove('footer-down');
+            }
+          } else {
+            // Scrolling up (and not at very bottom): show header, bring footer back
+            if (st + window.innerHeight < document.documentElement.scrollHeight) {
+              if (header) {
+                header.classList.remove('nav-up');
+                header.classList.add('nav-down');
+              }
+              var footer = document.querySelector('.page-footer');
+              if (footer) {
+                footer.classList.add('footer-down');
+                footer.classList.remove('footer-up');
+              }
+            }
+          }
+
+          lastScrollTop = st;
+        }
+
+        // Nav transparency toggle: add class after 300px of scroll
+        window.addEventListener('scroll', function () {
+          var navbar = document.querySelector('.navbar-fixed-top');
+          if (!navbar) return;
+          if ((window.scrollY || document.documentElement.scrollTop) > 300) {
+            navbar.classList.add('top-nav-transparent');
+          } else {
+            navbar.classList.remove('top-nav-transparent');
+          }
+        });
+      })();
+    </script>
+  </body>
+</html>

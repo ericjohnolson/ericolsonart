@@ -1,0 +1,46 @@
+---
+import { getCollection } from 'astro:content';
+import ProjectLayout from '../../layouts/ProjectLayout.astro';
+
+export async function getStaticPaths() {
+  const allPosts = await getCollection('posts');
+
+  // Sort by date ascending to determine prev/next order
+  const sorted = allPosts.sort((a, b) => {
+    const dateA = a.data.date ? new Date(a.data.date).getTime() : 0;
+    const dateB = b.data.date ? new Date(b.data.date).getTime() : 0;
+    return dateA - dateB;
+  });
+
+  return sorted.map((post, index) => {
+    const prev = index > 0 ? sorted[index - 1] : null;
+    const next = index < sorted.length - 1 ? sorted[index + 1] : null;
+
+    return {
+      params: { slug: post.slug },
+      props: {
+        post,
+        prevHref: prev ? `/blog/${prev.slug}/` : undefined,
+        prevTitle: prev ? prev.data.title : undefined,
+        nextHref: next ? `/blog/${next.slug}/` : undefined,
+        nextTitle: next ? next.data.title : undefined,
+      },
+    };
+  });
+}
+
+const { post, prevHref, prevTitle, nextHref, nextTitle } = Astro.props;
+const { Content } = await post.render();
+---
+
+<ProjectLayout
+  title={post.data.title}
+  images={[]}
+  prevHref={prevHref}
+  prevTitle={prevTitle}
+  nextHref={nextHref}
+  nextTitle={nextTitle}
+  bodyClass="projects-theme base-theme"
+>
+  <Content />
+</ProjectLayout>

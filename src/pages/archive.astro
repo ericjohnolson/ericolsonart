@@ -1,0 +1,128 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const allProjects = await getCollection('projects');
+
+// Sort descending by date
+const sorted = allProjects.sort((a, b) => {
+  const dateA = a.data.date ? new Date(a.data.date).getTime() : 0;
+  const dateB = b.data.date ? new Date(b.data.date).getTime() : 0;
+  return dateB - dateA;
+});
+
+// Helper to filter by category (case-insensitive)
+function byCategory(cat: string) {
+  return sorted.filter((p) =>
+    p.data.categories.some((c) => c.toLowerCase() === cat.toLowerCase())
+  );
+}
+
+const socialPractice = byCategory('social-practice');
+const videos = byCategory('videos');
+const technology = byCategory('technology');
+const performance = byCategory('performance');
+const publications = byCategory('publications');
+const oralHistories = byCategory('oral-histories');
+const objects = byCategory('objects');
+---
+
+<BaseLayout
+  title="Archive"
+  description="Archived work by Eric Olson, organized by category"
+  bodyClass="projects-theme base-theme"
+  navVariant="inner"
+>
+  <section class="heading">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12" style="margin-top:0">
+          <span>&nbsp;</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container thumbnail-gallery">
+      <div class="row">
+
+        <!-- Column 1: Social Practice + Video -->
+        <div class="col-md-3 col-xs-12">
+          <h4>Social Practice</h4>
+          {socialPractice.map((p) => (
+            <div>
+              <a href={`/projects/${p.slug}/`}>{p.data.title}</a> -
+              {p.data.excerpt && <span>{p.data.excerpt}</span>}
+              <br /><br />
+            </div>
+          ))}
+
+          <h4>Video</h4>
+          {videos.map((p) => (
+            <div>
+              <a href={`/projects/${p.slug}/`}>{p.data.title}</a> -
+              {p.data.excerpt && <span>{p.data.excerpt}</span>}
+              <br /><br />
+            </div>
+          ))}
+        </div>
+
+        <!-- Column 2: Technology + Performance -->
+        <div class="col-md-3 col-xs-12">
+          <h4>Technology</h4>
+          {technology.map((p) => (
+            <div>
+              <a href={`/projects/${p.slug}/`}>{p.data.title}</a> -
+              {p.data.excerpt && <span>{p.data.excerpt}</span>}
+              <br /><br />
+            </div>
+          ))}
+
+          <h4>Performance</h4>
+          {performance.map((p) => (
+            <div>
+              <a href={`/projects/${p.slug}/`}>{p.data.title}</a> -
+              {p.data.excerpt && <span>{p.data.excerpt}</span>}
+              <br /><br />
+            </div>
+          ))}
+        </div>
+
+        <!-- Column 3: Publications + Oral Histories -->
+        <div class="col-md-3 col-xs-12">
+          <h4>Publications</h4>
+          {publications.map((p) => (
+            <div>
+              <a href={`/projects/${p.slug}/`}>{p.data.title}</a> -
+              {p.data.excerpt && <span>{p.data.excerpt}</span>}
+              <br /><br />
+            </div>
+          ))}
+
+          <h4>Oral History</h4>
+          {oralHistories.map((p) => (
+            <div>
+              <a href={`/projects/${p.slug}/`}>{p.data.title}</a> -
+              {p.data.excerpt && <span>{p.data.excerpt}</span>}
+              <br /><br />
+            </div>
+          ))}
+        </div>
+
+        <!-- Column 4: Objects -->
+        <div class="col-md-3 col-xs-12">
+          <h4>Objects</h4>
+          {objects.map((p) => (
+            <div>
+              <a href={`/projects/${p.slug}/`}>{p.data.title}</a> -
+              {p.data.excerpt && <span>{p.data.excerpt}</span>}
+              <br /><br />
+            </div>
+          ))}
+        </div>
+
+      </div>
+    </div>
+  </section>
+</BaseLayout>

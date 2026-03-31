@@ -1,0 +1,56 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const allPosts = await getCollection('posts');
+
+// Sort descending by date
+const posts = allPosts.sort((a, b) => {
+  const dateA = a.data.date ? new Date(a.data.date).getTime() : 0;
+  const dateB = b.data.date ? new Date(b.data.date).getTime() : 0;
+  return dateB - dateA;
+});
+---
+
+<BaseLayout
+  title="Blog"
+  description="Blog posts by Eric Olson"
+  bodyClass="projects-theme base-theme"
+  navVariant="inner"
+>
+  <section class="heading">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-md-12" style="margin-top:0">
+          <span>&nbsp;</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container thumbnail-gallery">
+      <div class="row">
+        <div class="col-xs-12 col-md-12">
+          <h3>Blog</h3>
+          <hr />
+        </div>
+
+        {posts.map((post) => (
+          <div class="col-xs-12 col-md-12">
+            <p>
+              <h3>
+                <a href={`/blog/${post.slug}/`}>{post.data.title}</a>
+              </h3>
+              {post.data.date && (
+                <small>{new Date(post.data.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</small>
+              )}
+              {post.data.excerpt && <p>{post.data.excerpt}</p>}
+            </p>
+            <hr />
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

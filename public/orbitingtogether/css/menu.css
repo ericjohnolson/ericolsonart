@@ -1,0 +1,534 @@
+
+
+ul {
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+}
+
+a:link, a:link, a:visited, a:visited, a:active, a:active {
+    text-decoration: none;
+}
+
+a:hover {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    filter: alpha(opacity=100);
+    -moz-opacity: 1.0;
+    -khtml-opacity: 1.0;
+    opacity: 1.0;
+}
+
+/* PRELOADER **********************************************************/
+
+#qLoverlay {
+    width: 100%;
+    height: 100%;
+    background-color: #292929;
+    background-position: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: fixed;
+    z-index: 9999999999;
+    top: 0;
+    left: 0;
+}
+/* ==========================================================================
+   HEADER MOBILE
+   ==========================================================================*/
+#header-mobile {
+    display: none;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+}
+
+.header-icon {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    font-size: 1.2em;
+    color: #fff;
+    box-sizing: border-box;
+    /*width: 76px;*/
+    width: 70px;
+    height: 70px;
+}
+
+.site-masterhead-inner-wrap {
+    width: 100%;
+    overflow: hidden;
+    /*height: 52px;*/
+    height: 70px;
+}
+
+.logo_mobile, .logo_mobile a, .logo_mobile a:link, .logo_mobile a:active, .logo_mobile a:visited, .logo_mobile a:hover {
+    left: 0px;
+    top: 0px;
+    /*padding: 10px 15px 16px 10px;*/
+    padding: 19px 15px 25px 10px;
+    margin-left: 0px;
+    color: #fff;
+    font-size: 1.2em;
+}
+
+.menu-mobile {
+    right: 0px;
+    top: 0px;
+    /*padding: 12px 20px 16px 20px;*/
+    padding: 21px 20px 25px 20px;
+}
+
+.language-mobile {
+    right: 50px;
+    top: 0px;
+    /*padding: 12px 20px 16px 20px;*/
+    padding: 21px 20px 25px 20px;
+    color: #999;
+}
+
+.bt-menu-trigger {
+    position: fixed;
+    left: 0px;
+    z-index: 100;
+    display: block;
+    width: 76px;
+    height: 70px;
+    cursor: pointer;
+    background: rgba(255,255,255,0.1);
+    text-align: center;
+    padding: 0px 26px;
+    box-sizing: border-box !important;
+}
+
+    .bt-menu-trigger,
+    .bt-menu-trigger *,
+    .bt-menu-trigger *:after,
+    .bt-menu-trigger *:before {
+        box-sizing: border-box;
+    }
+
+        .bt-menu-trigger span {
+            position: absolute;
+            top: 50%;
+            display: block;
+            width: 24px;
+            height: 2px;
+            background-color: #fff;
+            font-size: 0px;
+            -webkit-transition: background-color 0.3s;
+            transition: background-color 0.3s;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+            .bt-menu-trigger span:before, .bt-menu-trigger span:after {
+                position: absolute;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: #fff;
+                content: '';
+                -webkit-transition: -webkit-transform 0.3s, background-color 0.3s;
+                transition: transform 0.3s, background-color 0.3s;
+            }
+
+            .bt-menu-trigger span:before {
+                -webkit-transform: translateY(-250%);
+                transform: translateY(-250%);
+            }
+
+            .bt-menu-trigger span:after {
+                -webkit-transform: translateY(250%);
+                transform: translateY(250%);
+            }
+
+        .bt-menu-trigger.open span:before {
+            -webkit-transform: translateY(-350%);
+            transform: translateY(-350%);
+        }
+
+        .bt-menu-trigger.open span:after {
+            -webkit-transform: translateY(350%);
+            transform: translateY(350%);
+        }
+
+/* ==========================================================================
+   END HEADER MOBILE
+   ==========================================================================*/
+
+
+/* ==========================================================================
+   MENU MOBILE BACK
+   ==========================================================================*/
+.menu-mobile-back, .menu-mobile-language {
+    width: 100%;
+    height: auto;
+    background: url('../img/background_menu_m.png');
+    overflow: hidden;
+    display: none;
+    text-align: center;
+    position: fixed;
+    top: 0px;
+    padding-top: 70px;
+    z-index: -1;
+    height: 100%;
+    opacity: 0;
+    margin-left: -20px;
+}
+
+.menu-mobile-back-list {
+    list-style: none;
+    /*padding: 12px 0px;*/
+    width: 100%;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 0px;
+}
+
+.menu-mobile-back-list-item {
+    width: auto;
+    margin-bottom: 1px;
+    color: #7d7d7d;
+    font-size: 3.4em;
+    padding: 9px 20px;
+    line-height: 1em;
+    display: block;
+}
+
+.menu-mobile-back-list-item.idiomas-movil {
+    padding-top: 40px;
+}
+
+.menu-mobile-back-list-item.idiomas-movil a.actlang {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.menu-mobile-back-list-item a, .menu-mobile-back-list-item a:link, .menu-mobile-back-list-item a:hover, .menu-mobile-back-list-item a:active, .menu-mobile-back-list-item a:visited {
+    color: #7d7d7d;
+    text-decoration: none;
+}
+
+.menu-mobile-back-list-item.trends-menu-mobile {
+    color: white;
+}
+/* ==========================================================================
+   END MENU MOBILE BACK
+   ==========================================================================*/
+
+
+/***********************************************************************
+ * MAIN MENU
+ **********************************************************************/
+#header_show {
+    position: fixed;
+    top: 0px;
+    /*height: 52px;*/
+    height: 70px;
+    z-index: 9999;
+    width: 100%;
+    display: block;
+    background: transparent;
+    cursor: default;
+    display: none;
+}
+
+#header_show .icon-lois {
+    float: left;
+    /*padding: 11px 25px 17px 25px;*/
+    /*padding: 23px 25px 25px 25px;*/
+    padding: 23px 23px 25px 23px;
+    width: 24px;
+    height: 24px;
+    font-size: 1.7em;
+    color: #43bffb;
+    margin-right: 18px;
+    background: white;
+}
+
+#header_desktop {
+    z-index: 99999;
+    color: white;
+    position: fixed;
+    height: 70px;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    background-color: transparent;
+}
+
+.logo, .logo a, .logo a:link, .logo a:active, .logo a:visited, .logo a:hover {
+    float: left;
+    /*padding: 14px 25px 16px 25px;*/
+    /*padding: 23px 25px 25px 25px;*/
+    padding: 23px 23px 25px 23px;
+    color: #fff;
+    width: 24px;
+    height: 24px;
+    /*font-size: 1.2em;*/
+    font-size: 19.2000007629395px;
+    color: #fff;
+    margin-right: 18px;
+    /*position: relative;
+    top: -5px;*/
+}
+
+#main_nav.dark {
+    background-color: black;
+}
+
+#main_nav > img {
+    float: left;
+    display: inline;
+    margin: 0px 41px 0px 25px;
+}
+
+#main_nav > span {
+    display: block;
+    background-color: white;
+    width: 0px;
+    height: 5px;
+    margin-top: 53px;
+    position: absolute;
+}
+
+header > span {
+    height: 1px;
+    background-color: white;
+    position: absolute;
+    display: block;
+    top: 58px;
+    width: 100%;
+    z-index: 2;
+}
+
+.transp {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    filter: alpha(opacity=50); /* This works in IE 8 & 9 too ... but also 5, 6, 7 */
+    -moz-opacity: 0.5; /* Older than Firefox 0.9 */
+    -khtml-opacity: 0.5; /* Safari 1.x (pre WebKit!) */
+    opacity: 0.5; /* Modern! Firefox 0.9+, Safari 2?, Chrome any? Opera 9+, IE 9+ */
+    /*z-index:1;*/
+}
+
+.menu {
+    position: relative;
+    z-index: 3;
+    font-family: 'Raleway';
+    font-size:14px;
+}
+
+.menu li {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+.menu a {
+    cursor: pointer;
+    color: #aaa;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=100);
+    -moz-opacity: 1.0;
+    -khtml-opacity: 1.0;
+    opacity: 1.0;
+}
+
+.menu a:link, .menu a:visited, .menu a:active {
+    color: #fff;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    color: #fff;
+    text-decoration:underline;
+}
+
+.selected a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+#main_nav .menu li {
+    display: inline-block;
+    float: left;
+    padding: 23px 5px 21px 5px;
+    margin-right: 13px;
+}
+
+#main_nav .menu.menu-margin > li:first-child {
+    margin-left: 90px;
+}
+
+.selected > a {
+    color: #fff;
+    cursor: default;
+}
+
+.selected a:hover {
+    color: #fff;
+}
+
+#main_nav #menu_lang > li {
+    float: right;
+}
+
+#main_nav #idioma {
+    float: right;
+    margin-left: 0px;
+    margin-right: 25px;
+    text-align: right;
+    direction: rtl;
+}
+
+#idioma .selected > a {
+    cursor: default;
+}
+
+
+#back_submenu {
+    position: fixed;
+    /*top:52px;*/
+    top: 70px;
+    height: 0px;
+    width: 100%;
+    min-width: 960px;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+    filter: alpha(opacity=90);
+    -moz-opacity: 0.9;
+    -khtml-opacity: 0.9;
+    opacity: 0.9;
+}
+
+
+#campanya ul, #idioma ul {
+    overflow: hidden;
+}
+
+
+/* FOOTER **********************************************************************/
+
+body > footer {
+    /*min-width:930px;*/
+    z-index: 2;
+    font-size: 12px;
+    color: white;
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    height: 35px;
+}
+
+footer > span {
+    height: 1px;
+    background-color: white;
+    position: absolute;
+    display: block;
+    width: 100%;
+    z-index: 2;
+}
+
+footer > div {
+    margin-top: 5px;
+}
+
+footer .copy {
+    margin: 4px 8px 0px 25px;
+    float: left;
+    font-size: 14px;
+    color: #aaa;
+}
+
+footer #by {
+    float: right;
+    padding: 2px 25px 0px 0px;
+    font-size: 14px;
+}
+
+footer a {
+    font-size: 15px;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+    filter: alpha(opacity=60); /* This works in IE 8 & 9 too ... but also 5, 6, 7 */
+    -moz-opacity: 0.6; /* Older than Firefox 0.9 */
+    -khtml-opacity: 0.6; /* Safari 1.x (pre WebKit!) */
+    opacity: 0.6; /* Modern! Firefox 0.9+, Safari 2?, Chrome any? Opera 9+, IE 9+ */
+}
+
+    footer a:hover {
+        font-size: 15px;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+        filter: alpha(opacity=100); /* This works in IE 8 & 9 too ... but also 5, 6, 7 */
+        -moz-opacity: 1; /* Older than Firefox 0.9 */
+        -khtml-opacity: 1; /* Safari 1.x (pre WebKit!) */
+        opacity: 1; /* Modern! Firefox 0.9+, Safari 2?, Chrome any? Opera 9+, IE 9+ */
+    }
+
+footer img {
+    margin: 3px 1px 0px 0px;
+}
+
+#menu_footer {
+    float: right;
+    font-size: 15px;
+    z-index: auto;
+}
+
+    #menu_footer li {
+        display: inline-block;
+        margin: 2px 22px 0px 0px;
+    }
+
+footer a:link, footer a:link,
+footer a:visited, footer a:visited,
+footer a:active, footer a:active {
+    color: white;
+    text-decoration: none;
+}
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+/* TABLETS & MOBILE */
+@media only screen and (max-width: 1025px) {
+    #header_desktop {
+        top: 0 !important;
+        /*display:block!important;*/
+    }
+
+    #header_show {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 955px) {
+
+    /* MENUS */
+    #header_desktop {
+        display: none !important;
+    }
+
+    #header_show {
+        display: none !important;
+    }
+
+    #header-mobile {
+        display: block !important;
+    }
+
+    footer {
+        display: none;
+    }
+
+   .menu-mobile-back-list-item {
+        font-size: 1.4em;
+    }
+}

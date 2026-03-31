@@ -1,0 +1,40 @@
+﻿
+<footer id="footer" class="site-footer">
+    <div class="wrap">
+        <div class="footer-content footer-insert">
+            <p class="footer-caret">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</p>
+            <div class="footer-wrap">
+                <div class="footer-tag"><p>Supporting the arts through opportunities.</p></div>
+                <div class="footer-name"><p>Petit Nickel</p></div>
+                <div class="footer-contact">
+                    <p><a href="classifieds/5.html">About</a></p>
+                    <p><a href="mailto:classifieds@petitnickel.com" target="_blank">Email</a></p>
+                    <p><a href="advertising-specs-2015.pdf" target="_blank">Advertising</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer><!-- .site-footer -->
+
+<script type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function () {
+        var scrolldiv1 = $(".sidescroll p"); //the div you want
+        var height = $(".home .banner").height() * 0.75; //calculate height of window or whatever element you want it to scroll past
+
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > height) {
+                $(scrolldiv1).css('color', '#5cd64a');
+                $(scrolldiv1).css('border-color', '#5cd64a');
+            }
+
+            else {
+                $(scrolldiv1).css('color', '#ffffff');
+                $(scrolldiv1).css('border-color', '#ffffff');
+
+            }
+
+        });
+    });
+    //]]>
+</script>

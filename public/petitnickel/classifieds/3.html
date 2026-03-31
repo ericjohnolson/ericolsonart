@@ -1,0 +1,510 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Petit Nickel - Classifieds for volunteers and internships in the arts</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Arbutus+Slab' rel='stylesheet' type='text/css'>
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16" />
+    <link rel="stylesheet" href="../site.css" />
+    <script src="../site.js"></script>
+    <script type="text/javascript">
+        //<![CDATA[
+        $(document).ready(function () {
+            init();
+        });
+        //]]>
+    </script>
+</head>
+<body>
+    <div class="site-container">
+        <div id="htmlHeader"></div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2  hidden-xs" style="padding-top:85px;">
+                    <div class="banner-img">
+                        <a href="http://newartdealers.org/" onclick="recordOutboundLink(this, 'http://newartdealers.org/', 'banner'); window.open(this.href); return false;">
+                            <img width="130" src="http://moussemagazine.it/img/banners/229_Nada-2015-NY-MOUSSE-130x70-v2.gif" alt="advertising" class="pngFix">
+                        </a>
+                    </div>
+
+                    <div class="banner-img">
+                        <a href="http://www.lastresortgallery.com/" onclick="recordOutboundLink(this, 'http://www.lastresortgallery.com/', 'banner'); window.open(this.href); return false;">
+                            <img width="130" src="http://moussemagazine.it/img/banners/68_mousse-banner-last-resort-bw.gif" alt="advertising" class="pngFix">
+                        </a>
+                    </div>
+
+                    <div class="banner-img">
+                        <a href="http://interspire.e-flux.com/link.php?M=163058&amp;N=8660&amp;L=16840&amp;F=H" onclick="recordOutboundLink(this, 'http://interspire.e-flux.com/link.php?M=163058&amp;N=8660&amp;L=16840&amp;F=H', 'banner'); window.open(this.href); return false;">
+                            <img width="130" src="http://moussemagazine.it/img/banners/129_MOUSSE-Web-Banner-AUP.jpg" alt="advertising" class="pngFix">
+                        </a>
+                    </div>
+
+
+                    <div class="banner-img">
+                        <a href="http://friezenewyork.com/visitors/?utm_source=Mousse&amp;utm_medium=banner&amp;utm_campaign=FNY15Marketing" onclick="recordOutboundLink(this, 'http://friezenewyork.com/visitors/?utm_source=Mousse&amp;utm_medium=banner&amp;utm_campaign=FNY15Marketing', 'banner'); window.open(this.href); return false;">
+                            <img width="130" src="http://moussemagazine.it/img/banners/228_friezeNY.jpg" alt="advertising" class="pngFix">
+                        </a>
+                    </div>
+
+                    <div class="banner-img">
+                        <a href="http://www.extracity.org" onclick="recordOutboundLink(this, 'http://www.extracity.org', 'banner'); window.open(this.href); return false;">
+                            <img width="130" src="http://moussemagazine.it/img/banners/222_extra-city.jpg" alt="advertising" class="pngFix">
+                        </a>
+                    </div>
+
+                    <div class="banner-img">
+                        <a href="http://www.sothebys.com/en/auctions/2015/arte-moderna-contemporanea-mi0326.html" onclick="recordOutboundLink(this, 'http://www.sothebys.com/en/auctions/2015/arte-moderna-contemporanea-mi0326.html', 'banner'); window.open(this.href); return false;">
+                            <img width="130" src="http://moussemagazine.it/img/banners/223_sothebys.gif" alt="advertising" class="pngFix">
+                        </a>
+                    </div>
+
+                    <div class="banner-img">
+                        <a href="http://www.giomarconi.com/" onclick="recordOutboundLink(this, 'http://www.giomarconi.com/', 'banner'); window.open(this.href); return false;">
+                            <img width="130" src="http://moussemagazine.it/img/banners/11_giomarconi.png" alt="advertising" class="pngFix">
+                        </a>
+                    </div>
+
+
+
+                    <div class="banner-img">
+                        <a href="http://amtproject.sk/" onclick="recordOutboundLink(this, 'http://amtproject.sk/', 'banner'); window.open(this.href); return false;">
+                            <img width="130" src="http://moussemagazine.it/img/banners/199_amt-artworks.gif" alt="advertising" class="pngFix">
+                        </a>
+                    </div>
+
+
+                    <div class="banner-img">
+                        <a href="http://www.museion.it" onclick="recordOutboundLink(this, 'http://www.museion.it', 'banner'); window.open(this.href); return false;">
+                            <img width="130" src="http://moussemagazine.it/img/banners/193_Mousse130x70.gif" alt="advertising" class="pngFix">
+                        </a>
+                    </div>
+
+                </div>
+                <div class="col-md-8 col-xs-12">
+                    <div class="col-md-6 col-xs-12">
+                        <h1>Internships</h1>
+                        <p>
+                            <strong>
+                                CURATORIAL, DEVELOPMENT,
+                                AND VISTOR
+                                SERVICES (Queens, NY)
+                            </strong>
+                        </p> <p>
+
+                            Our internship program
+                            provides the opportunity
+                            to learn about the
+                            operations of a non-profit
+                            art institution and to work
+                            alongside some of the
+                            world’s most exciting contemporary
+                            artists and
+                            curators. Intern candidates
+                            must possess a strong
+                            command of English, excellent
+                            communication
+                            skills, strong writing skills,
+                            word-processing skills on a
+                            PC-platform, and the ability
+                            to work and function
+                            in a creative and flexible
+                            environment. Most interns
+                            are based in one department,
+                            but have the opportunity
+                            to interact with all
+                            departments on a regular
+                            basis. All interns work on a
+                            volunteer basis for a full 3
+                            months w/ a schedule determined
+                            by the Intern’s
+                            supervisor. MoMA PS1 is
+                            looking for interns who are
+                            able to work a minimum
+                            of two full days per wk (7
+                            hrs per day). Tasks include
+                            archiving, media management,
+                            and research, as
+                            well as admini + production
+                            duties relevant to organizing
+                            exhibitions and public
+                            programs. While working
+                            in the Visitor Services dept
+                            at MoMA PS1 plays an
+                            integral role in developing
+                            creative audience engagement
+                            and educational
+                            opportunities. All applications
+                            must include a cover
+                            letter, resume and
+                            the attached application
+                            completed, sent to: internships_
+                            ps1@moma.org
+                        </p> <hr />
+                        <p>
+                            <strong>
+                                INTERNSHIP AT NON -
+                                PROFIT ART GALLERY
+                            </strong>
+                        </p>
+                        <p>
+                            SOHO20 Chelsea Gallery,
+                            an artist run non-profit gallery
+                            committed to promoting
+                            women artists, is seeking
+                            a winter - spring intern.
+                            The intern will support
+                            daily gallery operations and
+                            gain insight into the workings
+                            of a small arts non
+                            -- profit. Responsibilities
+                            will include: promoting
+                            exhibitions and press outreach,
+                            overseeing social
+                            media platforms, providing
+                            admin support for residency
+                            open call, cataloging
+                            artist files, assistance
+                            at gallery events, and
+                            general research projects.
+                            Candidates should display
+                            enthusiasm for contemporary
+                            art. The internship will
+                            require 2 dy/wk commitment
+                            Contact us to apply:
+                            http://bit.ly/1HuawU3 g
+                        </p>
+                        <hr />
+                        <p>
+                            <strong>
+                                ARTIST ASSISTANCE:
+                                ARTS ADMINISTRATION
+                                + MANAGEMENT (SoHo)
+                            </strong>
+                        </p>
+                        <p>
+                            compensation: unpaid, pos
+                            sible commission, lunch
+                            provided. Are you on a
+                            track to be an art dealer,
+                            gallery director, or curator?
+                            This internship could
+                            be valuable for you. We
+                            are looking for someone
+                            to interact with museums,
+                            galleries, and potential
+                            art buyers, who can write
+                            and talk on the phone.
+                            While this is an unpaid internship,
+                            commissions on
+                            sales may be made. See
+                            if the artist’s work resonates
+                            with you and if
+                            does, please apply. www.
+                            maxicohenstudio.com.
+                            Maxi Cohen’s films, videos
+                            and photographs are in
+                            the permanent collections
+                            of the Museum of Modern
+                            Art, the Metropolitan Museum
+                            of Art , the Museum of
+                            Fine Arts in Houston, Paley
+                            Media Center, and the Israel
+                            Museum of Art. Her
+                            films and video have also
+                            been shown at the Whitney
+                            Museum of American
+                            Art, the International
+                            Center of Photograph, the
+                            Jewish Museum, Everson
+                            Museum in Syracuse, and
+                            other museums. Maxi’s
+                            documentary films have
+                            been broadcasted interna
+                            tionally and played in
+                            movie theaters. Maxi has
+                            taught at NYU and Pratt
+                            and lectured at MIT, USC,
+                            UCLA, Hunter and other
+                            universities. PLEASE APPLY:
+                            www.maxicohenstudio.
+                            com
+                        </p>
+                        <hr /><p>
+                            <strong>
+                                STUX+HALLER GALERY
+                            </strong>
+                        </p>
+                        <p>
+                            Seeks HIGHLY motivated
+                            Interns available immediately.
+                            Qualified candidates
+                            should be highly
+                            personable, motivated
+                            and responsible, have
+                            excellent phone manner,
+                            POLISHED appearance,
+                            and an interest in contemporary
+                            art. A minimum
+                            of three months plus additional
+                            hours as needed.
+                            Email resume to stux@
+                            stuxgallery.com
+                        </p>
+                        <hr />
+                    </div>
+                    <div class="col-md-6  col-xs-12">
+                        <h1>&nbsp;</h1>
+                        <p><strong>SOCIAL MEDIA INTERN</strong></p> <p>
+                            (Beverly Hills)
+                            Compensation: Unpaid
+                            Internship. The Revolver
+                            Gallery in Beverly Hills is
+                            looking for late Spring/
+                            Summer interns to work in
+                            our art gallery. The Revolver
+                            Gallery exclusively
+                            sells the works of Andy
+                            Warhol. In our internship
+                            program, interns
+                            gain valuable knowledge
+                            and hands-on experience
+                            working closely with the
+                            Gallery Director and Social
+                            Media Manager.
+                            You will be given a firsthand
+                            look at the day-to-day
+                            operations of a gallery,
+                            as well as an in-depth
+                            understanding of digital
+                            marketing and selling of
+                            blue chip art. The Revolver
+                            Gallery is looking for
+                            a savvy candidate who
+                            is enthusiastic about Pop
+                            Art and Andy Warhol, understands
+                            contemporary
+                            art and Andy Warhol, and
+                            has a strong interest in digital
+                            media. You will develop
+                            a grasp in the art market,
+                            how to market to different
+                            demographics, and learn
+                            how auctions work. You
+                            will also write creative and
+                            engaging content that
+                            comes to life on social media
+                            platforms. We require
+                            the following: self-motivated,
+                            able to work autonomously
+                            with a team mentality,
+                            extremely organized,
+                            articulate, very computer
+                            and internet literate, reliable,
+                            able to multi-task in
+                            a very fast-paced environment,
+                            MAC, MS Office &
+                            Adobe Creative Suite proficient.
+                            Responsibilities
+                            include: Providing general
+                            office administration
+                            support, updating Gallery
+                            Manager database, updating
+                            the website with images
+                            and artist bios, Maintaining
+                            artist files, archives,
+                            and inventories, Assisting
+                            with art fair and exhibition
+                            preparation, Formatting
+                            articles and images
+                            in Photoshop, Proficiency
+                            in Mac and Adobe Creative
+                            Suite (Illustrator,
+                            InDesign, Premiere Pro),
+                            Light art handling, assist
+                            with planning and mounting
+                            of exhibitions.
+                            Assist with coordinating
+                            shipping for works coming
+                            in and out of gallery,
+                            Gallery sitting, Creating
+                            content on social media
+                            platforms (Facebook, Twitter,
+                            Instagram, Pinterest,
+                            Ello, Snapchat...) Please
+                            include your resume and
+                            cover letter, which highlights
+                            your exp. (310) 786-
+                            7417
+                        </p> <hr />
+                        <p><strong>BERLIN COLLECTIVE INTERNSHIP PROGRAM</strong></p>
+                        <p>
+                            We offer Internships with Artists  in  their studios, with art galleries, companies, arts organizations     in Berlin, Buenos Aires,
+                            London, NYC and Los Angeles. We do not    provide   visas or support with this process as we   are   a U.S. based company. We review and edit
+                            resumes   to help you meet your     professional goals.  Many    of our BC Internships can lead to paid positions. Simple  Steps  to Obtaining an
+                            Internship: 1. You    send   us   an   email expressing your intertest 2. We follow up, start researching,  your   request   for   an internship.  3. You register and
+                            make   a payment. You must      make the payment before this is processed  and confirmed. 4. We contact   you with the internship   possibility 5. We check  in   to   see
+                            that   all moving   smoothly.    6. You receive   a   reference letter
+                            upon     completion   of   the
+                            Berlin Collective  Internship
+                            Program   from    the   Artist, Curator, or Gallery.Register   Here   to    Join
+                            the       Berlin    Collective
+                            Internship           Program:
+                            <a href="http://www.berlincollective.de/internships/">www.berlincollective.de/internships/</a>
+                        </p>
+                        <hr />
+                        <p><strong>12 Mnth Internship @The
+Museum of Modern Art</strong></p> <p>
+                                      Full-time, 12-Month internship
+                                      offered for recent college
+                                      graduates interested
+                                      in pursuing a museum career.
+                                      The focused departmental
+                                      training is integrated
+                                      with the fall, spring,
+                                      and summer lecture series
+                                      and complemented with
+                                      financial provisions for the
+                                      interns to attend an international
+                                      art event related
+                                      to their field of interest.
+                                      Description: Primary responsibilities
+                                      include creating
+                                      and producing
+                                      multimedia, assisting in the
+                                      creation of educational
+                                      websites, and coordinating
+                                      educational resources for
+                                      the web. The intern will
+                                      also help with technology
+                                      needs across the Education
+                                      Department — creating
+                                      creative Powerpoint
+                                      slides and faciliating in
+                                      presentations, resizing images,
+                                      and teaching basic
+                                      image and video editing
+                                      software (iMovie, Garageband,
+                                      Screenflow, or
+                                      other screen - capture
+                                      software). Requirements:
+                                      Facility and comfort
+                                      with social media (i.e.,
+                                      Facebook, Twitter, Flickr,
+                                      YouTube. Experience with
+                                      shooting, editing, and producing
+                                      video. Knowledge
+                                      of applications such as
+                                      Photoshop, iMovie, Final
+                                      Cut Pro, Garageband, Audacity,
+                                      and Screenflow (or
+                                      other screen - capture applications).
+                                      Knowledge of
+                                      MS Office applications
+                                      (primarily Word, Power-
+                                      Point, and Excel). Experience
+                                      with online learning
+                                      environment, such ass
+                                      Blackboard or Moodle. Experience
+                                      with blogging applications
+                                      such as Blogger
+                                      or WordPress. Experience
+                                      using iTunes, Vimeo, and
+                                      YouTube for uploading and
+                                      downloading content. Experience
+                                      teaching, ideally
+                                      in a museum or community
+                                      setting. An interest in
+                                      education, educational theory,
+                                      and the future of education
+                                      in the digital age.
+                                      The intern should have
+                                      except. skills. http://www.
+                                      moma.org/learn/courses/
+                                      internships.
+                        </p> <hr />
+                    </div>
+                    <div class="col-md-12 col-xs-12" style="text-align:center;">
+                        <nav>
+                            <ul class="pagination">
+                                <li>
+                                    <a href="2.html" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                                <li><a href="1.html">1</a></li>
+                                <li><a href="2.html">2</a></li>
+                                <li class="active"><a href="3.html">3</a></li>
+                                <li><a href="4.html">4</a></li>
+                                <li><a href="5.html">5</a></li>
+                                <li class="disabled"><a href="5.html">...</a></li>
+                                <li><a href="5.html">193</a></li>
+                                <li>
+                                    <a href="4.html" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="col-md-2 col-xs-12" style="padding-top:85px;">
+
+                    <div class="banner-img">
+                        <a href="http://www.mleuven.be/en/contemporary-art/peter-buggenhout/index.jsp?utm_source=mousse&amp;utm_medium=banner&amp;utm_campaign=buggenhout" onclick="recordOutboundLink(this, 'http://www.mleuven.be/en/contemporary-art/peter-buggenhout/index.jsp?utm_source=mousse&amp;utm_medium=banner&amp;utm_campaign=buggenhout', 'banner'); window.open(this.href); return false;">
+                            <img width="130" src="http://moussemagazine.it/img/banners/191_banner_mousse.gif" alt="advertising" class="pngFix">
+                        </a>
+                    </div>
+
+
+                    <div class="banner-img">
+                        <a href="http://www.presenhuber.com/" onclick="recordOutboundLink(this, 'http://www.presenhuber.com/', 'banner'); window.open(this.href); return false;">
+                            <img width="130" src="http://moussemagazine.it/img/banners/15_pressen.jpg" alt="advertising" class="pngFix">
+                        </a>
+                    </div>
+
+                    <div class="banner-img">
+                        <a href="http://www.galleriazero.it/" onclick="recordOutboundLink(this, 'http://www.galleriazero.it/', 'banner'); window.open(this.href); return false;">
+                            <img width="130" src="http://moussemagazine.it/img/banners/18_zero.gif" alt="advertising" class="pngFix">
+                        </a>
+                    </div>
+
+
+                    <div class="banner-img">
+                        <a href="http://www.summeracademy.at" onclick="recordOutboundLink(this, 'http://www.summeracademy.at', 'banner'); window.open(this.href); return false;">
+                            <img width="130" src="http://moussemagazine.it/img/banners/226_summeracademy.gif" alt="advertising" class="pngFix">
+                        </a>
+                    </div>
+
+                    <div class="banner-img">
+                        <a href="http://www.futuraproject.cz" onclick="recordOutboundLink(this, 'http://www.futuraproject.cz', 'banner'); window.open(this.href); return false;">
+                            <img width="130" src="http://moussemagazine.it/img/banners/141_FUTURA-MOUSSE.gif" alt="advertising" class="pngFix">
+                        </a>
+                    </div>
+                    <div class="banner-img">
+                        <a href="http://www.galerieartconcept.com/" onclick="recordOutboundLink(this, 'http://www.galerieartconcept.com/', 'banner'); window.open(this.href); return false;">
+                            <img width="130" src="http://moussemagazine.it/img/banners/14_monogramme.jpg" alt="advertising" class="pngFix">
+                        </a>
+                    </div>
+
+
+                    <div class="banner-img">
+                        <a href="http://newartdealers.org/" onclick="recordOutboundLink(this, 'http://newartdealers.org/', 'banner'); window.open(this.href); return false;">
+                            <img width="130" src="http://moussemagazine.it/img/banners/229_Nada-2015-NY-MOUSSE-130x70-v2.gif" alt="advertising" class="pngFix">
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div id="htmlFooter"></div>
+    </div>
+</body>
+</html>
+

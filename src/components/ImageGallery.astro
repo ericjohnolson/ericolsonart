@@ -1,0 +1,25 @@
+---
+/**
+ * ImageGallery component
+ *
+ * Vertically stacked image gallery.
+ *
+ * Props:
+ *   images - array of image URLs
+ *   alt    - alt text prefix (optional)
+ */
+interface Props {
+  images: string[];
+  alt?: string;
+}
+
+const { images, alt = 'Gallery image' } = Astro.props;
+---
+
+{images && images.length > 0 && (
+  <div class="image-gallery-wrap">
+    {images.map((src, i) => (
+      <p><img src={src} alt={`${alt} ${i + 1}`} loading="lazy" /></p>
+    ))}
+  </div>
+)}

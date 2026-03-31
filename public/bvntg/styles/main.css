@@ -1,0 +1,445 @@
+.slab, .title {
+	font-family:helvetica, sans-serif;
+}
+
+body {
+	font-family:helvetica, sans-serif;
+}
+
+.cf:before, .cf:after {
+	content:" ";
+	display:table;
+}
+
+.cf:after {
+	clear:both;
+}
+
+.figure, .presskitLink {
+	display:block;
+}
+
+.ul {
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+
+blockquote, .title, h3, .presskitLink {
+	text-align:center;
+}
+
+#navigation .name, .title {
+}
+
+#logo, section, #navigation .nav-container, .presskitLink, .presskitLink span, .relative {
+	position:relative;
+}
+
+.ir, .screenReader {
+	font:0/0 a;
+	text-shadow:none;
+	color:transparent;
+}
+
+.collapsed, .collapsed * {
+	height:0;
+	max-height:0;
+	padding-top:0;
+	padding-bottom:0;
+	overflow:hidden;
+}
+
+.google-maps {
+	position:relative;
+	padding-bottom:75%;
+	height:0;
+	overflow:hidden;
+}
+
+.google-maps iframe {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%!important;
+	height:100%!important;
+}
+
+.svg #logo, .svg #mobileLogo {
+	background-image: url('http://ericdidit.com/bvntg/images/keyholetext.png');
+}
+
+
+.logo-container {
+	position:relative;
+	height:70%;
+	overflow:hidden;
+	width:550px;
+	margin:auto;
+	top:50%;
+	-webkit-transform:translateY(-50%);
+	transform:translateY(-50%);
+}
+
+@media only screen and (max-width:40em) {
+	.logo-container, .logo-container #logo {
+	max-height:300px;
+	max-width:300px!important;
+}
+
+.logo-container #logo {
+	width:100%;
+}
+
+}#logo {
+	display:block;
+	color:transparent;
+	background-repeat:no-repeat;
+	height:100%;
+	margin:0 auto;
+	background-size:contain;
+}
+
+* {
+	margin:0;
+	padding:0;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+}
+
+a {
+	color:#000;
+	text-decoration:none;
+}
+
+a:hover {
+	border-bottom:1px solid #000;
+}
+
+img {
+	max-width:100%;
+	height:auto;
+}
+
+html {
+	height:100%;
+}
+
+body {
+	font-size:1rem;
+	line-height:1.5;
+	overflow-x:hidden;
+	max-width:1400px;
+	margin:0 auto;
+	color:#000;
+}
+
+@media only screen and (min-width:40em) {
+	body {
+	height:100%;
+}
+
+}#toggleMenu {
+	position:fixed;
+	top:25px;
+	right:15px;
+	z-index:999;
+	outline:0;
+	background:0 0;
+	border-radius:0;
+	border:none;
+	font-size:2rem;
+	display:none;
+     color:#fff;
+}
+
+@media only screen and (max-width:40em) {
+	#header.fixed #toggleMenu {
+	display:block;
+}
+
+}#progress {
+	top:80%;
+	padding:5px;
+	z-index:9999;
+	color:red;
+}
+
+#progress, #header {
+	position:fixed;
+	left:0;
+}
+
+#header {
+	z-index:50;
+	top:0;
+	right:0;
+	height:90%;
+	background:#000000;
+	overflow:hidden;
+    background-image:url('../images/menu-back.png');
+	background-repeat:repeat-x;
+	/*height:100%;
+	margin:0 auto;
+	background-size:contain;*/
+}
+
+@media only screen and (max-width:40em) {
+	#header {
+	transition:height .333s linear;
+}
+
+}#header.fixed {
+	height:100px!important;
+}
+
+#header.fixed #logo, #header.fixed .logo-container {
+	height:60px!important;
+	width:60px!important;
+	background-image: url('http://ericdidit.com/bvntg/images/keyhole.png');
+}
+
+#header.fixed #navigation {
+	opacity:1;
+}
+
+@media only screen and (max-width:40em) {
+	#header.fixed #navigation {
+	top:35%;
+}
+
+}@media only screen and (min-width:40em) {
+	#header.fixed #navigation {
+	top:50%;
+	-webkit-transform:translateY(-50%);
+	transform:translateY(-50%);
+}
+
+#header.fixed #navigation .pull-right {
+	top:-2.2em;
+}
+
+}#header.fixed #navigation .name {
+	text-align:left;
+	width:75px;
+	line-height:1;
+}
+
+@media only screen and (max-width:40em) {
+	#header.fixed.active {
+	height:100%!important;
+	overflow-y:auto;
+}
+
+#header.fixed.active .logo-container {
+	top:10%;
+}
+
+#header.fixed.active #navigation .name {
+	text-align:center;
+	width:auto;
+	position:relative;
+	line-height:6em;
+}
+
+#header.fixed.active #navigation .pull-right {
+	max-height:999999px;
+}
+
+}#content {
+	margin-top:100vh;
+	padding-top:4em;
+}
+
+#navigation {
+	opacity:0;
+	padding:0 1.5em;
+}
+
+@media only screen and (max-width:40em) {
+	#navigation {
+	top:0;
+	left:0;
+	right:0;
+	width:100%;
+	position:absolute;
+}
+
+}@media only screen and (min-width:40em) {
+	#navigation {
+	transition:opacity .33s;
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	padding:0 3em;
+}
+
+}@media only screen and (max-width:40em) {
+	#navigation .name {
+	display:block;
+	text-align:center;
+}
+
+}#navigation a {
+	line-height:3em;
+	font-weight:700;
+	color:#fff;
+	text-decoration:none;
+}
+
+@media only screen and (min-width:40em) {
+	#navigation a {
+	line-height:6em;
+}
+
+}@media only screen and (min-width:40em) {
+	#navigation a:hover, #navigation a.active {
+	border-bottom:1px solid #fff;
+}
+
+}@media only screen and (min-width:40em) {
+	#navigation .pull-right {
+	display:inline-block;
+	text-align:right;
+	position:absolute;
+	top:0;
+	right:0;
+}
+
+#navigation .pull-right a {
+	margin-left:1em;
+}
+
+}@media only screen and (max-width:40em) {
+	#navigation .pull-right {
+	max-height:0;
+	overflow:hidden;
+}
+
+#navigation .pull-right a {
+	display:block;
+	width:100%;
+	text-align:center;
+}
+
+}.slab {
+	font-weight:500;
+}
+
+.section-break {
+	margin-bottom:150px;
+}
+
+blockquote {
+	max-width:800px;
+	margin:3em auto;
+	font-size:1.5rem;
+	color:#000;
+}
+
+@media only screen and (min-width:40em) {
+	blockquote {
+	font-size:2rem;
+}
+
+}.container {
+	padding:1em;
+}
+
+@media only screen and (min-width:40em) {
+	.container {
+	padding:3em;
+}
+
+}.title {
+	font-size:1.5rem;
+	line-height:2rem;
+	max-width:30em;
+	margin:0 auto;
+	color:#fff;
+	background-color:rgb(255,0,255);
+}
+
+@media only screen and (min-width:40em) {
+	.title {
+	font-size:2rem;
+	line-height:2.5rem;
+}
+
+}.figure {
+	max-width:700px;
+	margin:0 auto;
+}
+
+.figure img {
+	margin-bottom:100px;
+}
+
+h3 {
+	border-bottom:1px solid #000;
+	padding-bottom:.5em;
+	margin:1em auto;
+	max-width:400px;
+}
+
+.text {
+	max-width:50em;
+	margin:0 auto;
+	padding:2em 1em;
+	font-wieght:500;
+	overflow:hidden;
+}
+
+@media only screen and (min-width:40em) {
+	.text {
+	padding:2em;
+}
+
+}.text ul {
+	list-style:none;
+}
+
+@media only screen and (min-width:40em) {
+	.text.centered {
+	text-align:center;
+}
+
+}.row {
+	overflow:hidden;
+	max-width:75%;
+	margin:0 auto;
+}
+
+.col {
+	padding:1em 0;
+}
+
+@media only screen and (min-width:40em) {
+	.col {
+	width:33.33%;
+	padding:2em 1em;
+	overflow:hidden;
+	float:left;
+}
+
+}.col ul {
+	margin-bottom:1em;
+	list-style:none;
+}
+
+.col strong {
+	display:block;
+	margin-bottom:1em;
+}
+
+#top {
+	background:#ff8483;
+}
+
+ul li {
+	margin-bottom:1em;
+}
+
+
+

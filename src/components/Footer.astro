@@ -1,0 +1,36 @@
+---
+/**
+ * Footer component
+ *
+ * Props:
+ *   variant: "home" | "inner"  (default: "inner")
+ *
+ * "home"  => splash-footer inline with masthead (no wrapper element - rendered by page)
+ * "inner" => standard site footer with links and CC license
+ *
+ * Note: The home page renders its own footer inside the masthead layout.
+ * This component is for inner pages only by default.
+ */
+interface Props {
+  variant?: 'home' | 'inner';
+}
+const { variant = 'inner' } = Astro.props;
+const year = new Date().getFullYear();
+---
+
+{variant === 'inner' && (
+  <footer class="">
+    <div class="container">
+      <span>
+        Also there's a more over at
+        <a href="https://vimeo.com/ericjohnolson">vimeo</a> and
+        <a href="https://github.com/ericjohnolson">github</a>.
+        All content is under a
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">
+          creative&nbsp;commons&nbsp;license
+        </a>,
+        {year}.
+      </span>
+    </div>
+  </footer>
+)}

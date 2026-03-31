@@ -1,0 +1,41 @@
+---
+/**
+ * ProjectCard component
+ *
+ * Props:
+ *   title    - project title
+ *   href     - link URL
+ *   thumbnail - background image URL (optional)
+ *   excerpt  - short description (optional)
+ */
+interface Props {
+  title: string;
+  href: string;
+  thumbnail?: string | null;
+  excerpt?: string;
+}
+
+const { title, href, thumbnail, excerpt } = Astro.props;
+---
+
+<div class="col-xs-12 col-md-12">
+  {thumbnail ? (
+    <a href={href} class="thumbnail">
+      <div
+        class="image-cover"
+        style={`background-image:url(${thumbnail});`}
+      ><span>&nbsp;</span></div>
+    </a>
+  ) : (
+    <a href={href} class="thumbnail">
+      <div class="image-cover" style="background-color:#ccc;">
+        <span>{title}</span>
+      </div>
+    </a>
+  )}
+  <p>
+    <h3><a href={href}>{title}</a></h3>
+    {excerpt && <span>{excerpt}</span>}
+  </p>
+  <hr />
+</div>

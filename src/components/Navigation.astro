@@ -1,0 +1,102 @@
+---
+/**
+ * Navigation component
+ *
+ * Props:
+ *   variant: "home" | "inner"  (default: "inner")
+ *
+ * "home"  => transparent navbar-index (no brand X, white text)
+ * "inner" => top-nav-transparent with X brand link back to home
+ */
+interface Props {
+  variant?: 'home' | 'inner';
+}
+const { variant = 'inner' } = Astro.props;
+const isHome = variant === 'home';
+---
+
+{isHome ? (
+  <!-- Home page: gradient background, no brand X, nav links are blue/transparent -->
+  <header class="navbar navbar-fixed-top navbar-index" id="navigation" role="banner">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="navbar-header">
+          <button
+            class="navbar-toggle collapsed"
+            type="button"
+            aria-controls="bs-navbar"
+            aria-expanded="false"
+            data-target="#bs-navbar"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <nav id="bs-navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/work/">Work</a></li>
+            <li><a href="/research/">Research</a></li>
+            <li><a href="/archive/">Archive</a></li>
+            <li><a href="/about/">About</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+) : (
+  <!-- Inner pages: solid top bar with X brand back to home -->
+  <header class="navbar navbar-fixed-top" id="navigation" role="banner">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="navbar-header">
+          <button
+            class="navbar-toggle collapsed"
+            type="button"
+            aria-controls="bs-navbar"
+            aria-expanded="false"
+            data-target="#bs-navbar"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <span class="navbar-brand">
+            <a class="brand-name" href="/">
+              <span class="fa fa-remove"></span>
+            </a>
+          </span>
+        </div>
+        <nav id="bs-navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/work/">Work</a></li>
+            <li><a href="/research/">Research</a></li>
+            <li><a href="/archive/">Archive</a></li>
+            <li><a href="/about/">About</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+)}
+
+<script>
+  // Vanilla JS mobile nav toggle (no jQuery)
+  document.addEventListener('DOMContentLoaded', () => {
+    const toggleBtns = document.querySelectorAll<HTMLButtonElement>('.navbar-toggle');
+    toggleBtns.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const targetId = btn.getAttribute('data-target');
+        if (!targetId) return;
+        const target = document.querySelector(targetId);
+        if (!target) return;
+        const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!isExpanded));
+        btn.classList.toggle('collapsed', isExpanded);
+        target.classList.toggle('in', !isExpanded);
+      });
+    });
+  });
+</script>

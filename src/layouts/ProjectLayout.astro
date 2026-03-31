@@ -1,0 +1,89 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import ImageGallery from '../components/ImageGallery.astro';
+
+/**
+ * ProjectLayout
+ *
+ * Props:
+ *   title      - project/post title
+ *   images     - array of image URLs for the gallery
+ *   prevHref   - URL of the previous project/post (optional)
+ *   prevTitle  - title of the previous project/post (optional)
+ *   nextHref   - URL of the next project/post (optional)
+ *   nextTitle  - title of the next project/post (optional)
+ *   bodyClass  - CSS body class (default: "projects-theme base-theme")
+ */
+interface Props {
+  title: string;
+  images?: string[];
+  prevHref?: string;
+  prevTitle?: string;
+  nextHref?: string;
+  nextTitle?: string;
+  bodyClass?: string;
+}
+
+const {
+  title,
+  images = [],
+  prevHref,
+  prevTitle,
+  nextHref,
+  nextTitle,
+  bodyClass = 'projects-theme base-theme',
+} = Astro.props;
+---
+
+<BaseLayout
+  title={title}
+  bodyClass={bodyClass}
+  navVariant="inner"
+  showFooter={false}
+>
+  <section class="heading">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 layoutSingleColumn text-center">
+          <p class="text-center page-quote">{title}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-content pad-top-50">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 layoutSingleColumn">
+          {images && images.length > 0 && (
+            <ImageGallery images={images} alt={title} />
+          )}
+          <slot />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <nav class="navbar navbar-default navbar-fixed-bottom page-footer" role="navigation">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 layoutSingleColumn page-footer-container">
+          {prevHref && prevTitle && (
+            <div class="pull-left truncate">
+              <a href={prevHref} title={prevTitle}>
+                Previous: &ldquo;{prevTitle}&rdquo;
+              </a>
+            </div>
+          )}
+          {nextHref && nextTitle && (
+            <div class="pull-right truncate">
+              <a href={nextHref} title={nextTitle}>
+                Next: &ldquo;{nextTitle}&rdquo;
+              </a>
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  </nav>
+</BaseLayout>
