@@ -1,4 +1,5 @@
 ---
+featured: true
 title: Be Vintage
 slug: be-vintage
 date: 2015-01-25

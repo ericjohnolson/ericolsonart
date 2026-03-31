@@ -1,4 +1,5 @@
 ---
+featured: true
 title: Sharing Our Voices
 slug: sharing-our-voices
 date: 2017-02-17

@@ -1,4 +1,5 @@
 ---
+featured: true
 title: Sonic Decay
 slug: sonic-decay
 date: 2017-02-10

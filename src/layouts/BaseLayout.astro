@@ -57,7 +57,7 @@ const fullTitle = title === 'Eric Olson' ? title : `${title} | Eric Olson`;
       crossorigin
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Arbutus+Slab&family=Libre+Baskerville:wght@400;700&family=Montserrat&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;1,400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,700&family=Red+Hat+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
       rel="stylesheet"
     />
 
@@ -109,11 +109,19 @@ const fullTitle = title === 'Eric Olson' ? title : `${title} | Eric Olson`;
 
         function hasScrolled() {
           var st = window.scrollY || document.documentElement.scrollTop;
+          var atBottom = (st + window.innerHeight) >= (document.documentElement.scrollHeight - 10);
 
           // Only act if scroll distance exceeds delta
-          if (Math.abs(lastScrollTop - st) <= delta) return;
+          if (Math.abs(lastScrollTop - st) <= delta && !atBottom) return;
 
-          if (st > lastScrollTop && st > navbarHeight) {
+          // Always show footer when at the bottom of the page
+          if (atBottom) {
+            var footer = document.querySelector('.page-footer');
+            if (footer) {
+              footer.classList.add('footer-down');
+              footer.classList.remove('footer-up');
+            }
+          } else if (st > lastScrollTop && st > navbarHeight) {
             // Scrolling down past the navbar: hide header, push footer out
             if (header) {
               header.classList.remove('nav-down');
@@ -125,17 +133,15 @@ const fullTitle = title === 'Eric Olson' ? title : `${title} | Eric Olson`;
               footer.classList.remove('footer-down');
             }
           } else {
-            // Scrolling up (and not at very bottom): show header, bring footer back
-            if (st + window.innerHeight < document.documentElement.scrollHeight) {
-              if (header) {
-                header.classList.remove('nav-up');
-                header.classList.add('nav-down');
-              }
-              var footer = document.querySelector('.page-footer');
-              if (footer) {
-                footer.classList.add('footer-down');
-                footer.classList.remove('footer-up');
-              }
+            // Scrolling up: show header, bring footer back
+            if (header) {
+              header.classList.remove('nav-up');
+              header.classList.add('nav-down');
+            }
+            var footer = document.querySelector('.page-footer');
+            if (footer) {
+              footer.classList.add('footer-down');
+              footer.classList.remove('footer-up');
             }
           }
 

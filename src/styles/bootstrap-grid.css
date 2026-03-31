@@ -1,7 +1,7 @@
 /*! Bootstrap 3.3.x - Grid + Navbar (extracted) | MIT License */
 
 /* normalize.css subset */
-html { font-family: sans-serif; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; }
+html { font-family: 'EB Garamond', serif; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; }
 body { margin: 0; }
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary { display: block; }
 a { background-color: transparent; }

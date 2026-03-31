@@ -1,4 +1,5 @@
 ---
+featured: true
 title: The limitless potential of clay
 slug: clays-limitless-potential
 date: 2019-08-22

@@ -1,4 +1,5 @@
 ---
+featured: true
 title: Between Two Shores
 slug: between-two-shores
 date: 2018-09-08

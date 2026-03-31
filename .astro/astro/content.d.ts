@@ -647,6 +647,48 @@ declare module 'astro:content' {
 } & { render(): Render[".md"] };
 };
 "projects": {
+"a-comedy-in-four-acts.md": {
+	id: "a-comedy-in-four-acts.md";
+  slug: "a-comedy-in-four-acts";
+  body: string;
+  collection: "projects";
+  data: InferEntrySchema<"projects">
+} & { render(): Render[".md"] };
+"all-i-ever-wanted-was-all-of-your-attention.md": {
+	id: "all-i-ever-wanted-was-all-of-your-attention.md";
+  slug: "all-i-ever-wanted-was-all-of-your-attention";
+  body: string;
+  collection: "projects";
+  data: InferEntrySchema<"projects">
+} & { render(): Render[".md"] };
+"an-insurable-disaster.md": {
+	id: "an-insurable-disaster.md";
+  slug: "an-insurable-disaster";
+  body: string;
+  collection: "projects";
+  data: InferEntrySchema<"projects">
+} & { render(): Render[".md"] };
+"anywhere-but-here.md": {
+	id: "anywhere-but-here.md";
+  slug: "anywhere-but-here";
+  body: string;
+  collection: "projects";
+  data: InferEntrySchema<"projects">
+} & { render(): Render[".md"] };
+"are-you-exhausted.md": {
+	id: "are-you-exhausted.md";
+  slug: "are-you-exhausted";
+  body: string;
+  collection: "projects";
+  data: InferEntrySchema<"projects">
+} & { render(): Render[".md"] };
+"automatic-messaging-medium.md": {
+	id: "automatic-messaging-medium.md";
+  slug: "automatic-messaging-medium";
+  body: string;
+  collection: "projects";
+  data: InferEntrySchema<"projects">
+} & { render(): Render[".md"] };
 "be-vintage.md": {
 	id: "be-vintage.md";
   slug: "be-vintage";
@@ -661,9 +703,30 @@ declare module 'astro:content' {
   collection: "projects";
   data: InferEntrySchema<"projects">
 } & { render(): Render[".md"] };
+"boozbot.md": {
+	id: "boozbot.md";
+  slug: "boozbot";
+  body: string;
+  collection: "projects";
+  data: InferEntrySchema<"projects">
+} & { render(): Render[".md"] };
 "canton-grill-degustatory-research.md": {
 	id: "canton-grill-degustatory-research.md";
   slug: "canton-grill-degustatory-research";
+  body: string;
+  collection: "projects";
+  data: InferEntrySchema<"projects">
+} & { render(): Render[".md"] };
+"cheap-tricks-humiliations.md": {
+	id: "cheap-tricks-humiliations.md";
+  slug: "cheap-tricks-humiliations";
+  body: string;
+  collection: "projects";
+  data: InferEntrySchema<"projects">
+} & { render(): Render[".md"] };
+"childhood-ghosts.md": {
+	id: "childhood-ghosts.md";
+  slug: "childhood-ghosts";
   body: string;
   collection: "projects";
   data: InferEntrySchema<"projects">
@@ -682,9 +745,121 @@ declare module 'astro:content' {
   collection: "projects";
   data: InferEntrySchema<"projects">
 } & { render(): Render[".md"] };
+"dial-an-old-friend.md": {
+	id: "dial-an-old-friend.md";
+  slug: "dial-an-old-friend";
+  body: string;
+  collection: "projects";
+  data: InferEntrySchema<"projects">
+} & { render(): Render[".md"] };
+"dirt-party.md": {
+	id: "dirt-party.md";
+  slug: "dirt-party";
+  body: string;
+  collection: "projects";
+  data: InferEntrySchema<"projects">
+} & { render(): Render[".md"] };
+"excercising-the-museum.md": {
+	id: "excercising-the-museum.md";
+  slug: "excercising-the-museum";
+  body: string;
+  collection: "projects";
+  data: InferEntrySchema<"projects">
+} & { render(): Render[".md"] };
+"extinctable.md": {
+	id: "extinctable.md";
+  slug: "extinctable";
+  body: string;
+  collection: "projects";
+  data: InferEntrySchema<"projects">
+} & { render(): Render[".md"] };
+"failure-variety-show.md": {
+	id: "failure-variety-show.md";
+  slug: "failure-variety-show";
+  body: string;
+  collection: "projects";
+  data: InferEntrySchema<"projects">
+} & { render(): Render[".md"] };
+"finding-the-through-line.md": {
+	id: "finding-the-through-line.md";
+  slug: "finding-the-through-line";
+  body: string;
+  collection: "projects";
+  data: InferEntrySchema<"projects">
+} & { render(): Render[".md"] };
+"hear-here-walla-walla.md": {
+	id: "hear-here-walla-walla.md";
+  slug: "hear-here-walla-walla";
+  body: string;
+  collection: "projects";
+  data: InferEntrySchema<"projects">
+} & { render(): Render[".md"] };
+"i-broken-heart-ny.md": {
+	id: "i-broken-heart-ny.md";
+  slug: "i-broken-heart-ny";
+  body: string;
+  collection: "projects";
+  data: InferEntrySchema<"projects">
+} & { render(): Render[".md"] };
+"i-threatened-to-jump.md": {
+	id: "i-threatened-to-jump.md";
+  slug: "i-threatened-to-jump";
+  body: string;
+  collection: "projects";
+  data: InferEntrySchema<"projects">
+} & { render(): Render[".md"] };
+"intergenerational-skill-exchange.md": {
+	id: "intergenerational-skill-exchange.md";
+  slug: "intergenerational-skill-exchange";
+  body: string;
+  collection: "projects";
+  data: InferEntrySchema<"projects">
+} & { render(): Render[".md"] };
+"it-ended-and-began-at-night.md": {
+	id: "it-ended-and-began-at-night.md";
+  slug: "it-ended-and-began-at-night";
+  body: string;
+  collection: "projects";
+  data: InferEntrySchema<"projects">
+} & { render(): Render[".md"] };
+"just-dont.md": {
+	id: "just-dont.md";
+  slug: "just-dont";
+  body: string;
+  collection: "projects";
+  data: InferEntrySchema<"projects">
+} & { render(): Render[".md"] };
 "le-petit-nickel.md": {
 	id: "le-petit-nickel.md";
   slug: "le-petit-nickel";
+  body: string;
+  collection: "projects";
+  data: InferEntrySchema<"projects">
+} & { render(): Render[".md"] };
+"let-it-slide.md": {
+	id: "let-it-slide.md";
+  slug: "let-it-slide";
+  body: string;
+  collection: "projects";
+  data: InferEntrySchema<"projects">
+} & { render(): Render[".md"] };
+"may-1968.md": {
+	id: "may-1968.md";
+  slug: "may-1968";
+  body: string;
+  collection: "projects";
+  data: InferEntrySchema<"projects">
+} & { render(): Render[".md"] };
+"no-entiendo-nada.md": {
+	id: "no-entiendo-nada.md";
+  slug: "no-entiendo-nada";
+  body: string;
+  collection: "projects";
+  data: InferEntrySchema<"projects">
+} & { render(): Render[".md"] };
+"no-money-no-problem.md": {
+	id: "no-money-no-problem.md";
+  slug: "no-money-no-problem";
   body: string;
   collection: "projects";
   data: InferEntrySchema<"projects">
@@ -703,9 +878,58 @@ declare module 'astro:content' {
   collection: "projects";
   data: InferEntrySchema<"projects">
 } & { render(): Render[".md"] };
+"pice.md": {
+	id: "pice.md";
+  slug: "pice";
+  body: string;
+  collection: "projects";
+  data: InferEntrySchema<"projects">
+} & { render(): Render[".md"] };
+"quantifying-contentment.md": {
+	id: "quantifying-contentment.md";
+  slug: "quantifying-contentment";
+  body: string;
+  collection: "projects";
+  data: InferEntrySchema<"projects">
+} & { render(): Render[".md"] };
+"remove-all-dads-mugs.md": {
+	id: "remove-all-dads-mugs.md";
+  slug: "remove-all-dads-mugs";
+  body: string;
+  collection: "projects";
+  data: InferEntrySchema<"projects">
+} & { render(): Render[".md"] };
+"response-to-on-the-boards-performances.md": {
+	id: "response-to-on-the-boards-performances.md";
+  slug: "response-to-on-the-boards-performances";
+  body: string;
+  collection: "projects";
+  data: InferEntrySchema<"projects">
+} & { render(): Render[".md"] };
 "score-sculptures-for-the-sculpture-park.md": {
 	id: "score-sculptures-for-the-sculpture-park.md";
   slug: "score-sculptures-for-the-sculpture-park";
+  body: string;
+  collection: "projects";
+  data: InferEntrySchema<"projects">
+} & { render(): Render[".md"] };
+"scvngrhnt.md": {
+	id: "scvngrhnt.md";
+  slug: "scvngrhnt";
+  body: string;
+  collection: "projects";
+  data: InferEntrySchema<"projects">
+} & { render(): Render[".md"] };
+"seating-meditation.md": {
+	id: "seating-meditation.md";
+  slug: "seating-meditation";
+  body: string;
+  collection: "projects";
+  data: InferEntrySchema<"projects">
+} & { render(): Render[".md"] };
+"seaworthy.md": {
+	id: "seaworthy.md";
+  slug: "seaworthy";
   body: string;
   collection: "projects";
   data: InferEntrySchema<"projects">
@@ -717,6 +941,20 @@ declare module 'astro:content' {
   collection: "projects";
   data: InferEntrySchema<"projects">
 } & { render(): Render[".md"] };
+"sofa-journal.md": {
+	id: "sofa-journal.md";
+  slug: "sofa-journal";
+  body: string;
+  collection: "projects";
+  data: InferEntrySchema<"projects">
+} & { render(): Render[".md"] };
+"sold-at-a-loss.md": {
+	id: "sold-at-a-loss.md";
+  slug: "sold-at-a-loss";
+  body: string;
+  collection: "projects";
+  data: InferEntrySchema<"projects">
+} & { render(): Render[".md"] };
 "sonic-decay.md": {
 	id: "sonic-decay.md";
   slug: "sonic-decay";
@@ -724,9 +962,30 @@ declare module 'astro:content' {
   collection: "projects";
   data: InferEntrySchema<"projects">
 } & { render(): Render[".md"] };
+"spectate-or-speculate.md": {
+	id: "spectate-or-speculate.md";
+  slug: "spectate-or-speculate";
+  body: string;
+  collection: "projects";
+  data: InferEntrySchema<"projects">
+} & { render(): Render[".md"] };
+"tacocat-hey-girl.md": {
+	id: "tacocat-hey-girl.md";
+  slug: "tacocat-hey-girl";
+  body: string;
+  collection: "projects";
+  data: InferEntrySchema<"projects">
+} & { render(): Render[".md"] };
 "tenant-self-defense.md": {
 	id: "tenant-self-defense.md";
   slug: "tenant-self-defense";
+  body: string;
+  collection: "projects";
+  data: InferEntrySchema<"projects">
+} & { render(): Render[".md"] };
+"tunnels.md": {
+	id: "tunnels.md";
+  slug: "tunnels";
   body: string;
   collection: "projects";
   data: InferEntrySchema<"projects">

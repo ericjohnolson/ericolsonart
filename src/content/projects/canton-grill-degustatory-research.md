@@ -1,4 +1,5 @@
 ---
+featured: true
 title: Canton Grill Degustatory Research
 slug: canton-grill-degustatory-research
 date: 2019-08-22

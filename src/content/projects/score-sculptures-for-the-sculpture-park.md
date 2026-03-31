@@ -1,4 +1,5 @@
 ---
+featured: true
 title: Temporary Sculptures for a Sculpture Park
 slug: score-sculptures-for-the-sculpture-park
 date: 2018-03-01

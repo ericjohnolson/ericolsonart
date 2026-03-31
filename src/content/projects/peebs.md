@@ -1,4 +1,5 @@
 ---
+featured: true
 title: "People's Emergency Broadcast Service (PeEBS)"
 slug: peebs
 date: 2018-09-08

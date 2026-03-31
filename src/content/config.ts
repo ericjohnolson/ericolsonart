@@ -13,6 +13,7 @@ const projects = defineCollection({
     images: z.array(z.string()).default([]),
     excerpt: z.string().optional().default(''),
     order: z.number().optional(),
+    featured: z.boolean().optional().default(false),
   }),
 });
 

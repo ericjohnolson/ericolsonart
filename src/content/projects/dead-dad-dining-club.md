@@ -1,4 +1,5 @@
 ---
+featured: true
 title: Dead Dad Dining Club
 slug: dead-dad-dining-club
 date: 2017-02-19

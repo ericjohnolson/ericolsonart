@@ -44,7 +44,7 @@ const objects = byCategory('objects');
   </section>
 
   <section>
-    <div class="container thumbnail-gallery">
+    <div class="container thumbnail-gallery archive-wide">
       <div class="row">
 
         <!-- Column 1: Social Practice + Video -->
@@ -125,4 +125,11 @@ const objects = byCategory('objects');
       </div>
     </div>
   </section>
+  <style is:global>
+    body.projects-theme .thumbnail-gallery.archive-wide {
+      width: 100%;
+      max-width: 100%;
+      padding: 0 30px;
+    }
+  </style>
 </BaseLayout>

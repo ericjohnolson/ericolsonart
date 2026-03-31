@@ -1,4 +1,5 @@
 ---
+featured: true
 title: We Are a Crowd of Others
 slug: we-are-a-crowd-of-others
 date: 2017-02-18

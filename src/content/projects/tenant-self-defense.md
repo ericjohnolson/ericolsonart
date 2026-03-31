@@ -1,4 +1,5 @@
 ---
+featured: true
 title: Tenant Self-Defense
 slug: tenant-self-defense
 date: 2019-08-22

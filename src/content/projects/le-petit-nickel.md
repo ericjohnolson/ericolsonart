@@ -1,4 +1,5 @@
 ---
+featured: true
 title: Le Petit Nickel
 slug: le-petit-nickel
 date: 2015-06-02

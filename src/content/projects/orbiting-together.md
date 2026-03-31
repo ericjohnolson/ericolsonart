@@ -1,4 +1,5 @@
 ---
+featured: true
 title: Orbiting Together
 slug: orbiting-together
 date: 2018-03-27
